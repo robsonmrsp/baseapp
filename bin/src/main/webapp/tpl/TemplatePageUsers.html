@@ -1,0 +1,56 @@
+
+<div class="row top-fieldset">
+	<h1>Usuários</h1>
+	<div class="span8"></div>
+</div>
+
+<div class="btn-toolbar add-toolbar" style="margin: 0;">
+	<div class="btn-group">
+		<button id="btn-add" class="btn dropdown-toggle"
+			data-toggle="dropdown">
+			<i class="icon-plus-sign"> </i> Adicionar
+		</button>
+	</div>
+	<!-- /btn-group -->
+	<div class="pull-right">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#"> <i
+			class="icon-large tips icon-table" data-placement="left"
+			data-toggle="tooltip" title=""
+			data-original-title="Exibir como tabela."></i> <i
+			class="icon-large tips icon-th-large" data-placement="right"
+			data-toggle="tooltip" title=""
+			data-original-title="Exibir como thumbnails"></i>
+		</a>
+	</div>
+	<!-- 	<div class="btn-group"> -->
+	<!-- 		<button class="btn dropdown-toggle" data-toggle="dropdown"> -->
+	<!-- 			<i class="icon-sort"> </i> Ordenar por <span class="caret"></span> -->
+	<!-- 		</button> -->
+	<!-- 		<ul class="dropdown-menu"> -->
+	<!-- 			<li><a href="#">Nome</a></li> -->
+	<!-- 			<li><a href="#">Descrição</a></li> -->
+	<!-- 			<li><a href="#">Local</a></li> -->
+	<!-- 		</ul> -->
+	<!-- 	</div> -->
+</div>
+<div id="users" class="span9 listObject">
+	<!-- nesta div fica a lista de objetos. Tabela ou thunbnails -->
+</div>
+
+<div class="row">
+	<div id="form-user-modal" style="width: 850px; left: 40%"
+		class="mymodal modal fade" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true"
+		style="display: none;">
+		<div class="modal-h modal-header">
+			<button type="button" class="close" data-dismiss="modal"
+				aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Novo Evento</h3>
+		</div>
+		<div id="modal-body-user" class="modal-body"></div>
+		<div class="modal-footer">
+			<button id="btn-save" class="btn btn-success" aria-hidden="true">Salvar</button>
+			<button class="btn btn-danger" data-dismiss="modal">Sair</button>
+		</div>
+	</div>
+</div>

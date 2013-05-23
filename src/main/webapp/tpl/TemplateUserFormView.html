@@ -1,0 +1,62 @@
+<form id='formUp' class="form-horizontal" method="post"
+	action="rs/crud/uploads/file" enctype="multipart/form-data">
+	<input id="inputId" value="{{ id === null ? '' : id }}" type="hidden">
+	<div class="row">
+		<div class="span8">
+			<div class="alert alert-success" style="display: none"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span5">
+			<div class="control-group ">
+				<label class="control-label" for="inputName">Nome:</label>
+				<div class="controls">
+					<input class="span3" type="text" id="inputName"
+						placeholder="Nome do usuário" value="{{name}}">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label" for="inputUsername">Username</label>
+				<div class="controls">
+				<input class="span3" type="text" id="inputUsername"	placeholder="Login do usuário" value="{{ username}}">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label" for="inputDescription">Senha</label>
+				<div class="controls">
+					<input class="span3" type="password" id="inputPassword"	placeholder="Senha do usuário" value="{{ password}}">
+				</div>
+			</div>
+
+			<div class="control-group ">
+				<label class="control-label" for="inputRole">Papel:</label>
+				<div class="controls">
+					<select id="inputRole" class=" span3" >
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="span3 upload-center-image">
+			<div class="well upload-center-image">
+				<p>Foto do usuário</p>
+
+				<p class="upload-center-image" id='upload-recipe'>
+					<img id="inputPhoto" width="128px" height="128px"
+						src="{{ photo === null ? 'img/no-image-user-128.png' :  photo }}" />
+				</p>
+				<div class="row fileupload-buttonbar upload-center-image">
+					<div class="span3">
+
+						<span class="btn btn-success fileinput-button upload-center-image">
+							<i class="icon-plus icon-white"></i> <span>Alterar</span> <input
+							id='inputUploadImage' type="file" name="files[]">
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</form>

@@ -1,0 +1,62 @@
+/*
+    Regras de neg�cio 
+*/
+
+CRUDS
+
+- Cadastro de paineis(tv�s)
+	- endere�o(url do painel)
+	- local do painel
+	- tipo de painel (Concentrador, Frente de sala )
+	- descri��o do painel
+	- tamanho do painel(resolu��o)
+	- ??(o que mais)
+	
+	
+
+- Cadastro de eventos
+	- nome
+	- descri��o
+	- data inicio
+	- hora inicio
+	- data fim
+	- hora fim
+	- imagem simples
+	- ??(o que mais)
+	
+- Cadastro de endomarketing
+	- tipo da midia
+	- tempo de exibi��o
+	- descri��o
+	- conteudo(se for imagem ser� guardado o encode/base64, se for v�deo ser� guardado o url e o v�deo ser� guardado no sistema de arquivos da app)
+	- ??(o que mais)
+
+/*
+    regras de neg�cio 
+*/
+
+
+
+## Configurar um "modo de exibi��o". Entender por modo de exibi��o a forma com a qual a informa��o ser� exibida, devendo ser consideradas 
+as m�dias e os tempos em que estaram no ar(quando se tratar de imagem, pois o video demora seu tempo.) 
+
+tipo de exibi��o.(podemos considerar um minuto, X + Y + Z = 60s ??)
+	Exemplo de configura��o
+	
+	- painel X segundos
+	- midia 1 Y segundos.
+	- painel X segundos
+	- midia 2 Z segundos.
+	- painel X segundos
+	- v�deo demora o tempo de exibição.
+	- painel X segundos
+	
+- Configura��o dos paineis(onde ser� configurado a exii��o das midias, imagens, videos, etc )
+	-- 
+
+O painel concentrador exibir� os eventos que estiverem relacionados com o painel que o concentrador agrupa.
+ 	
+
+ 	
+ 	
+ 	http://wyuenho.github.com/backgrid/
