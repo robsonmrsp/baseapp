@@ -1,6 +1,5 @@
 define([ 'utilities/utils',  'underscore', 'backbone', 'views/user/UserView', 'text!templates/TemplatePageUsers.html','jquery', 'bootstrap' ],
-		function(utils, _, Backbone, UserView, templatePageUsers,$) {
-
+function(utils, _, Backbone, UserView, templatePageUsers,$) {
 	var UsersListView = Backbone.View.extend({
 		tagName : 'ul',
 		className : 'thumbnails',
@@ -22,6 +21,5 @@ define([ 'utilities/utils',  'underscore', 'backbone', 'views/user/UserView', 't
 		}
 
 	});
-
 	return UsersListView;
 });
