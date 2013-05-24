@@ -33,8 +33,14 @@ define([ 'utilities/utils', 'underscore', 'backbone', 'views/user/UserFormView',
 			$('#myModal' + id).modal('show');
 		},
 
+		_saveNewPassword : function(userModel) {
+
+		},
 		saveNewPassword : function(userModel) {
-			var user = this.model;
+			// O clone foi necessário pois o objeto this.model está assinando o
+			// evento on change, onde efetua a renderização da tela, fazendo com
+			// que o modal suma
+			var user = this.model.clone();
 			var id = this.model.get('id');
 			var oldPass = $('#inputOldPassword' + id).val();
 			var confPass = $('#inputConfirmPassword' + id).val();
@@ -49,12 +55,10 @@ define([ 'utilities/utils', 'underscore', 'backbone', 'views/user/UserFormView',
 				utils.showAlert('Erro!', [ 'A confirmação não bate' ], 'alert-error');
 				return;
 			}
-
-			user.save({
-				password : newPass
-			}, {
+			user.set('password', newPass);
+			user.save({}, {
 				success : function(_collection, _resp, _options) {
-					$('#changePassModal' + id).modal('hide');
+					utils.showAlert('Info!', [ 'Senha alterada com sucesso' ], 'alert-info');
 				},
 				error : function(model, xhr, options) {
 				},
