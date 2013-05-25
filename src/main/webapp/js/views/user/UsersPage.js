@@ -1,5 +1,6 @@
-define([ 'utilities/utils', 'underscore', 'backbone', 'models/UserModel', 'views/user/UsersListView', 'collections/UsersCollection', 'views/user/UserFormView', 'text!templates/TemplatePageUsers.html', 'jquery', 'bootstrap' ], function(utils, _, Backbone, UserModel,
-		UsersListView, UserCollection, UserFormView, templatePageUsers, $) {
+define([ 'utilities/utils', 'underscore', 'backbone', 'models/UserModel', 'views/user/UsersListView', 'collections/UsersCollection', 'views/user/UserFormView', 'text!templates/TemplatePageUsers.html', 'jquery', 'bootstrap' ],
+
+function(utils, _, Backbone, UserModel, UsersListView, UserCollection, UserFormView, templatePageUsers, $) {
 
 	var PageUsers = Backbone.View.extend({
 		template : _.template(templatePageUsers),
@@ -7,6 +8,9 @@ define([ 'utilities/utils', 'underscore', 'backbone', 'models/UserModel', 'views
 		events : {
 			'click #btn-add' : 'showAddFormUser',
 			'click #btn-save' : 'saveUser',
+			'click #showThumbnails' : 'showThumbnails',
+			'click #showTable' : 'showTable',
+
 		},
 
 		initialize : function() {
@@ -15,7 +19,7 @@ define([ 'utilities/utils', 'underscore', 'backbone', 'models/UserModel', 'views
 			this.AppUsers.fetch({
 				success : function(_usersCollection, _resp, _options) {
 					$("#page").html(that.render().el);
-					$('.tips').tooltip();
+					// $('.tips').tooltip();
 					that.setUsers(_usersCollection);
 				},
 				error : function(_usersCollection, _resp, _options) {
@@ -38,10 +42,16 @@ define([ 'utilities/utils', 'underscore', 'backbone', 'models/UserModel', 'views
 
 		setUsers : function(_usersCollection) {
 			this.collection = _usersCollection;
-			var allUsersView = new UsersListView({
+			this.allUsersView = new UsersListView({
 				collection : _usersCollection,
 			});
-			$("#users").html(allUsersView.render().el);
+			$("#users").html(this.allUsersView.render().el);
+		},
+		showTable : function() {
+			this.allUsersView.showTable();
+		},
+		showThumbnails : function() {
+			this.allUsersView.showThumbnails();
 		},
 
 		showAddFormUser : function() {
