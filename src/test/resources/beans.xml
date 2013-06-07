@@ -27,21 +27,13 @@
 	<bean
 		class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer" />
 
-	<jaxrs:server id="services" address="/">
-		<jaxrs:serviceBeans>
-			<bean class="br.com.sints.panel.PanelEventResources" />
-		</jaxrs:serviceBeans>
-		<jaxrs:providers>
-			<bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
-		</jaxrs:providers>
-	</jaxrs:server>
 	<context:annotation-config />
-	<context:component-scan base-package="br.com.sints" />
+	<context:component-scan base-package="br.com.mr" />
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
 		<property name="driverClass" value="org.postgresql.Driver" />
-		<property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/cellar" />
+		<property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/baseapp" />
 		<property name="user" value="postgres" />
 		<property name="password" value="robson78" />
 		<property name="acquireIncrement" value="10" />
@@ -49,7 +41,6 @@
 		<property name="maxPoolSize" value="80" />
 		<property name="maxIdleTime" value="200" />
 	</bean>
-
 
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
@@ -61,7 +52,7 @@
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
 		scope="singleton">
 		<property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="br.com.sints.panel.model" />
+		<property name="packagesToScan" value="br.com.mr.panel.model" />
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.spatial.dialect.postgis.PostgisDialect

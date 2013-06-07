@@ -31,16 +31,16 @@
 
 	<jaxrs:server id="services" address="/">
 		<jaxrs:serviceBeans>
-			<bean class="br.com.sints.app.rs.UserResources" />
-			<bean class="br.com.sints.app.rs.UploadResources" />
-			<bean class="br.com.sints.app.rs.RoleResources" />
+			<bean class="br.com.mr.app.rs.UserResources" />
+			<bean class="br.com.mr.app.rs.UploadResources" />
+			<bean class="br.com.mr.app.rs.RoleResources" />
 		</jaxrs:serviceBeans>
 		<jaxrs:providers>
 			<bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
 		</jaxrs:providers>
 	</jaxrs:server>
 	<context:annotation-config />
-	<context:component-scan base-package="br.com.sints" />
+	<context:component-scan base-package="br.com.mr" />
 
 	<jdbc:initialize-database ignore-failures="ALL">
 		<jdbc:script location="classpath:db/seed.sql" />
@@ -49,7 +49,7 @@
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
 		<property name="driverClass" value="org.postgresql.Driver" />
-		<property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/sints" />
+		<property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/baseapp" />
 		<property name="user" value="postgres" />
 		<property name="password" value="masterkey" />
 		<property name="acquireIncrement" value="10" />
@@ -69,7 +69,7 @@
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
 		scope="singleton">
 		<property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="br.com.sints.app.model" />
+		<property name="packagesToScan" value="br.com.mr.app.model" />
 
 		<property name="hibernateProperties">
 			<props>
