@@ -1,4 +1,6 @@
-define([ 'utilities/utils', 'underscore', 'backbone', 'views/user/UserFormView', 'text!templates/UserView.html', 'jquery', 'bootstrap' ], function(utils, _, Backbone, UserFormView, TemplateUserView, $) {
+define([ 'utilities/utils', 'underscore', 'backbone', 'views/user/UserFormView', 'text!templates/UserView.html', 'jquery', 'bootstrap' ], 
+
+function(utils, _, Backbone, UserFormView, TemplateUserView, $) {
 
 	var UserView = Backbone.View.extend({
 		tagName : 'li',

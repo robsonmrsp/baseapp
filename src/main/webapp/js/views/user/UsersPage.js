@@ -19,7 +19,7 @@ function(utils, _, Backbone, UserModel, UsersListView, UserCollection, UserFormV
 			this.AppUsers.fetch({
 				success : function(_usersCollection, _resp, _options) {
 					$("#page").html(that.render().el);
-					// $('.tips').tooltip();
+					$('.tips').tooltip();
 					that.setUsers(_usersCollection);
 				},
 				error : function(_usersCollection, _resp, _options) {

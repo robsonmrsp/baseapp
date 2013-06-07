@@ -13,7 +13,7 @@ require.config({
 	shim : {
 		bootstrap : [ 'jquery' ],
 		jqueryform : [ 'jquery' ],
-	
+
 		backgrid : {
 			deps : [ 'jquery', 'backbone', 'underscore' ],
 			exports : 'Backgrid'
@@ -22,25 +22,5 @@ require.config({
 });
 
 require([ 'app', ], function(App) {
-
 	App.initialize();
 });
-
-//
-//requirejs.config({
-//    baseUrl: '/pub/js',
-//    paths: {
-//        backgrid: 'vendor/backgrid/backgrid'
-//    },
-//    map: {
-//        '*': {
-//            'css': 'plugins/requirecss/css'
-//        }
-//    },
-//    shim: {
-//        backgrid: {
-//            deps: ['jquery', 'backbone', 'underscore', 'css!vendor/backgrid/backgrid'],
-//            exports: 'Backgrid'
-//        }
-//    }
-//}

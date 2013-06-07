@@ -16,7 +16,7 @@ function(Backgrid, utils, _, Backbone, UserView, templatePageUsers, $) {
 			var that = this
 			if (!this.gridUser) {
 				this.gridUser = new Backgrid.Grid({
-					className: "backgrid span9",
+					className : "backgrid span9",
 					columns : that.getColumns(),
 					collection : that.collection
 				});
@@ -55,12 +55,15 @@ function(Backgrid, utils, _, Backbone, UserView, templatePageUsers, $) {
 				})
 			}, {
 				name : "name",
+
 				label : "Name",
-				cell : "string"
+				cell : "string",
+				editable : false,
 			}, {
 				name : "username",
 				label : "Login",
-				cell : "string"
+				cell : "string",
+				editable : false,
 			} ];
 
 			return columns;

@@ -2,8 +2,8 @@ define([ 'jquery', 'underscore', 'backbone', 'views/user/UsersPage', ], function
 	var AppRouter = Backbone.Router.extend({
 		routes : {// js/collections/UserCollection.js
 			'' : 'index',
-			'sintsview/users' : 'users',
-			'sintsview/someEntity' : 'someEntity',
+			'app/users' : 'users',
+			'app/someEntity' : 'someEntity',
 		},
 
 		initialize : function() {
