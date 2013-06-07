@@ -35,7 +35,7 @@
 		<property name="driverClass" value="org.postgresql.Driver" />
 		<property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/baseapp" />
 		<property name="user" value="postgres" />
-		<property name="password" value="robson78" />
+		<property name="password" value="masterkey" />
 		<property name="acquireIncrement" value="10" />
 		<property name="minPoolSize" value="10" />
 		<property name="maxPoolSize" value="80" />
