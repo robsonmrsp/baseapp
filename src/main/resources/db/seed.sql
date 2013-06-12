@@ -7,7 +7,7 @@ ALTER TABLE user_role
 -- 
 -- Tabela de Papeis
 INSERT INTO role( id, authority, description)  VALUES (-1, '', '');
-INSERT INTO role( id, authority, description)  VALUES (1, 'ROLE_USER', 'Usuário comum do sistema');
+INSERT INTO role( id, authority, description)  VALUES (1, 'ROLE_USER', 'Usuário do sistema');
 INSERT INTO role( id, authority, description)  VALUES (2, 'ROLE_ADMIN', 'Administrador do sistema');
 
 --Tabela de usuários

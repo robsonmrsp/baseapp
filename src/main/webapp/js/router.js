@@ -1,4 +1,4 @@
-define([ 'jquery', 'underscore', 'backbone', 'views/user/UsersPage', ], function($, _, Backbone, PageUsers) {
+define([ 'jquery', 'underscore', 'backbone', 'views/user/UsersPage', 'models/UserModel' ], function($, _, Backbone, PageUsers, UserModel) {
 	var AppRouter = Backbone.Router.extend({
 		routes : {// js/collections/UserCollection.js
 			'' : 'index',
@@ -12,11 +12,25 @@ define([ 'jquery', 'underscore', 'backbone', 'views/user/UsersPage', ], function
 	});
 
 	var initialize = function() {
-		
+
 		var appRouter = new AppRouter;
-
+		var that = this;
 		appRouter.on('route:index', function() {
+			var loggedUser = new UserModel();
+			loggedUser.urlRoot = 'rs/crud/users/loggedUser';
+			loggedUser.fetch({
+				success : function(_user, _resp, _options) {
+					if (_user) {
+						$('#menuUserPhoto').attr('src', _user.get('photo'));
+						$('#menuUserName').html(_user.get('username'));
+						$('#menuUserRole').html(_user.get('role').description);
+					}
+				},
 
+				error : function(_model, _xhr, _options) {
+					console.log('Erro');
+				}
+			});
 		});
 
 		appRouter.on('route:users', function() {

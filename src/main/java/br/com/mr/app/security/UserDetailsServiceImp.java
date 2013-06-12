@@ -19,6 +19,7 @@ import br.com.mr.app.persistence.DaoUser;
 @Transactional
 public class UserDetailsServiceImp implements UserDetailsService {
 	private final DaoUser userDao;
+	private static int count;
 
 	@Inject
 	public UserDetailsServiceImp(DaoUser userDao) {
@@ -38,6 +39,8 @@ public class UserDetailsServiceImp implements UserDetailsService {
 		Collection<? extends GrantedAuthority> authorities = UserAuthorityUtils.createAuthorities(appUser);
 
 		User user = new User(appUser.getUsername(), appUser.getPassword(), authorities);
+		System.out.println("Acesso número: " + count++ + username);
+		System.out.println("Usuário: " + username);
 		return user;
 	}
 }
