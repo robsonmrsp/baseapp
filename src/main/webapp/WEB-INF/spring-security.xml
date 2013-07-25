@@ -9,14 +9,21 @@
 
 		<intercept-url pattern="/panel.html" access="permitAll" />
 
-		<intercept-url pattern="/index.html" access="hasRole('ROLE_USER')" />
+		<!-- <intercept-url pattern="/index.html" access="hasRole('ROLE_USER')" 
+			/> -->
+		<intercept-url pattern="/index.html" access="permitAll" />
 
 		<intercept-url pattern="/rs/cfg/**" access="permitAll" />
 
 		<intercept-url pattern="/rs/cfg/*" access="permitAll" />
 
-		<intercept-url pattern="/rs/crud/**" access="hasRole('ROLE_USER')" />
-		<intercept-url pattern="/rs/crud/*" access="hasRole('ROLE_USER')" />
+		<!-- <intercept-url pattern="/rs/crud/**" access="hasRole('ROLE_USER')" 
+			/> -->
+		<!-- <intercept-url pattern="/rs/crud/*" access="hasRole('ROLE_USER')" 
+			/> -->
+
+		<intercept-url pattern="/rs/crud/**" access="permitAll" />
+		<intercept-url pattern="/rs/crud/*" access="permitAll" />
 
 		<form-login login-page="/login.html" default-target-url="/"
 			authentication-failure-url="/login.html?login_error=1" />
@@ -27,12 +34,12 @@
 
 	<authentication-manager>
 		<authentication-provider user-service-ref="userDetailsServiceImp">
-<!-- 		TODO -->
-	<!-- por enquanto não pesaremos em criptografia -->
-<!-- 			<sec:password-encoder hash="md5" ref="passwordEncoder"> -->
-<!-- 			Md5PasswordEncoderPassword -->
-<!-- 				<sec:salt-source user-property="username" /> -->
-<!-- 			</sec:password-encoder> -->
+			<!-- TODO -->
+			<!-- por enquanto não pesaremos em criptografia -->
+			<!-- <sec:password-encoder hash="md5" ref="passwordEncoder"> -->
+			<!-- Md5PasswordEncoderPassword -->
+			<!-- <sec:salt-source user-property="username" /> -->
+			<!-- </sec:password-encoder> -->
 		</authentication-provider>
 	</authentication-manager>
 </beans:beans>

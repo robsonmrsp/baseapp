@@ -13,7 +13,7 @@ define([ 'jquery', 'underscore', 'backbone', 'views/user/UsersPage', 'models/Use
 		loggedUser.fetch({
 			success : function(_user, _resp, _options) {
 				if (_user) {
-					$('#menuUserPhoto').attr('src', _user.get('photo'));
+					$('#menuUserPhoto').attr('src', _.unescape(_user.get('photo')));
 					$('#menuUserName').html(_user.get('username'));
 					$('#menuUserRole').html(_user.get('role').description);
 				}

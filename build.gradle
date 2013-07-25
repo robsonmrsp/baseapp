@@ -1,0 +1,61 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'maven'
+
+group = 'br.com.mr'
+version = '1.0-SNAPSHOT'
+
+description = "App"
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+
+
+
+repositories {
+        
+     mavenRepo url: "http://download.osgeo.org/webdav/geotools"
+     mavenRepo url: "http://www.hibernatespatial.org/repository"
+     mavenRepo url: "http://download.java.net/maven/2"
+     mavenRepo url: "http://repo.maven.apache.org/maven2"
+}
+dependencies {
+	compile group: 'br.com.caelum', name: 'vraptor', version:'3.5.1'
+    compile group: 'org.apache.cxf', name: 'cxf-rt-frontend-jaxrs', version:'2.7.3'
+    compile group: 'de.micromata.jak', name: 'JavaAPIforKml', version:'2.2.0-SNAPSHOT'
+    compile group: 'org.apache.cxf', name: 'cxf-rt-transports-http', version:'2.7.3'
+    compile group: 'org.codehaus.jackson', name: 'jackson-core-asl', version:'1.8.6'
+    compile group: 'org.codehaus.jackson', name: 'jackson-mapper-asl', version:'1.8.6'
+    compile group: 'org.codehaus.jackson', name: 'jackson-jaxrs', version:'1.8.6'
+    compile group: 'org.springframework', name: 'spring-orm', version:'3.1.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context', version:'3.1.1.RELEASE'
+    compile group: 'org.springframework.security', name: 'spring-security-core', version:'3.1.1.RELEASE'
+    compile group: 'org.springframework.security', name: 'spring-security-web', version:'3.1.1.RELEASE'
+    compile group: 'org.springframework.security', name: 'spring-security-config', version:'3.1.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-web', version:'3.1.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-webmvc', version:'3.1.1.RELEASE'
+    compile group: 'javax.inject', name: 'javax.inject', version:'1'
+    compile group: 'commons-dbcp', name: 'commons-dbcp', version:'1.4'
+    compile group: 'org.hibernate', name: 'hibernate-core', version:'4.1.1.Final'
+    compile group: 'org.hibernate', name: 'hibernate-envers', version:'4.1.1.Final'
+    compile group: 'org.hibernate', name: 'hibernate-c3p0', version:'4.1.1.Final'
+    compile group: 'log4j', name: 'log4j', version:'1.2.16'
+    compile group: 'commons-codec', name: 'commons-codec', version:'1.2'
+    compile group: 'postgresql', name: 'postgresql', version:'8.4-701.jdbc3'
+    compile group: 'org.hibernate', name: 'hibernate-spatial', version:'4.0-M1'
+    compile group: 'org.postgis', name: 'postgis-jdbc', version:'1.3.3'
+    compile group: 'org.slf4j', name: 'slf4j-api', version:'1.6.6'
+    compile group: 'org.hibernate', name: 'hibernate-validator', version:'4.3.1.Final'
+    compile group: 'org.springframework', name: 'spring-aop', version:'3.1.1.RELEASE'
+    compile group: 'net.sf.dozer', name: 'dozer', version:'5.4.0'
+    runtime group: 'cglib', name: 'cglib', version:'2.2.2'
+    testCompile group: 'org.springframework', name: 'spring-test', version:'3.1.1.RELEASE'
+    testCompile group: 'junit', name: 'junit', version:'4.11'
+    providedCompile group: 'org.apache.tomcat', name: 'tomcat-catalina', version:'7.0.39'
+    providedCompile group: 'org.apache.tomcat', name: 'tomcat-servlet-api', version:'7.0.39'
+    providedCompile group: 'org.apache.tomcat', name: 'tomcat-coyote', version:'7.0.39'
+    providedCompile group: 'javax.validation', name: 'validation-api', version:'1.0.0.GA'
+    providedCompile group: 'javax.validation', name: 'validation-api', version:'1.0.0.GA', classifier:'sources'
+}

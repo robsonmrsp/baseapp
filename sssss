@@ -1,0 +1,74 @@
+[33mcommit bf8b99202cf5a3738a95ab8cc2bcc3f31788bd18[m
+Author: robsonmrsp <robsonmrsp@gmail.com>
+Date:   Wed Jun 12 14:27:17 2013 -0300
+
+    ajuste
+
+[33mcommit 74883702db923a1ecec07b86114f2ec23b43c646[m
+Author: robsonmrsp <robsonmrsp@gmail.com>
+Date:   Wed Jun 12 14:09:23 2013 -0300
+
+    ajustes, ...
+
+[33mcommit c6484695f3ce7001c264ab2a51a228dae33089be[m
+Author: robsonmrsp <robsonmrsp@gmail.com>
+Date:   Fri Jun 7 17:18:13 2013 -0300
+
+    update
+
+[33mcommit b6becf19beea953e80c794b0237eb5a7021e9434[m
+Author: robsonmrsp <robsonmrsp@gmail.com>
+Date:   Fri Jun 7 16:56:48 2013 -0300
+
+    update
+
+[33mcommit 6965cfe259e8027865bad16f56ecdb493ae04460[m
+Merge: 1a98d7e c72d67a
+Author: robsonmrsp <robsonmrsp@gmail.com>
+Date:   Fri Jun 7 16:25:13 2013 -0300
+
+    Merge branch 'master' of github.com:robsonmrsp/baseapp
+
+[33mcommit 1a98d7ead48d4ae93d0207e32011b196d5b267b3[m
+Author: robsonmrsp <robsonmrsp@gmail.com>
+Date:   Fri Jun 7 16:24:31 2013 -0300
+
+    removed boilerplate
+
+[33mcommit ff7b6765ce6440381c633a0e7900d3961bbf7b7b[m
+Author: robsonmrsp <robsonmrsp@gmail.com>
+Date:   Fri Jun 7 16:19:41 2013 -0300
+
+    ...
+
+[33mcommit c72d67aa389c602fb3c99ca9afc1af0ae2deb026[m
+Author: Marcio Robson <robsonmrsp@gmail.com>
+Date:   Fri Jun 7 15:50:12 2013 -0300
+
+    Create README.md
+    
+    adding readme
+
+[33mcommit dca88d06b6953b8d65ae2aba1871444d8994e46a[m
+Author: robsonmrsp <robsonmrsp@gmail.com>
+Date:   Sat May 25 10:53:45 2013 -0300
+
+    using BackGrid.js to render a list(table) of users
+
+[33mcommit c779748193c86ea6844a0964f43d68eaab5cba39[m
+Author: robsonmrsp <robsonmrsp@gmail.com>
+Date:   Thu May 23 23:56:06 2013 -0300
+
+    Fix the bug in the change password modal
+
+[33mcommit 2da0f62049b33b02f408f02e37c6bbd324b22bdc[m
+Author: robsonmrsp <robsonmrsp@gmail.com>
+Date:   Thu May 23 22:56:46 2013 -0300
+
+    Creating a superclass to FormViews
+
+[33mcommit b101259f84ec5d459c96511d14b241c383fa8b8b[m
+Author: robsonmrsp <robsonmrsp@gmail.com>
+Date:   Thu May 23 18:18:33 2013 -0300
+
+    first commit

@@ -26,19 +26,19 @@ define([ 'utilities/utils', 'underscore', 'backbone', 'collections/RolesCollecti
 
 		getFormModel : function() {
 			var localUser = new UserModel({
-				id : $('#inputId').val(),
-				name : $('#inputName').val(),
-				username : $('#inputUsername').val(),
-				password : $('#inputPassword').val(),
-				roleId : $('#inputRole').val(),
-				photo : $('#inputPhoto').attr('src'),
+				id : utils.escapeById('inputId'),
+				name : utils.escapeById('inputName'),
+				username : utils.escapeById('inputUsername'),
+				password : utils.escapeById('inputPassword'),
+				roleId : utils.escapeById('inputRole'),
+				photo : utils.escapeByAttr('inputPhoto', 'src'),
 			});
 
 			if (localUser.get('id') === "")
 				localUser.set('id', null);
 			return localUser;
 		},
-		
+
 		clearForm : function(user) {
 			$('#inputId').val(null);
 			$('#inputName').val('');

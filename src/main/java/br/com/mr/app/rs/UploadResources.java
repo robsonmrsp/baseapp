@@ -19,17 +19,17 @@ import javax.ws.rs.core.Response;
 import org.apache.cxf.common.util.Base64Utility;
 import org.apache.cxf.jaxrs.ext.multipart.Attachment;
 
+import br.com.mr.app.utils.ApplicationConfig;
+
 @Path("/crud/uploads")
 public class UploadResources {
 
-	@POST
-	@Path("/file")
-	@Consumes(MediaType.MULTIPART_FORM_DATA)
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response uploadFile(List<Attachment> attachments, @Context HttpServletRequest httpServletRequest) {
+	public Response uploadFile_(List<Attachment> attachments, @Context HttpServletRequest httpServletRequest) {
 		String encode64 = "";
 		DataUpload dataUpload = null;
-		String uploadFolder = httpServletRequest.getServletContext().getRealPath("/") + "uploads/";
+		// String uploadFolder =
+		// httpServletRequest.getServletContext().getRealPath("/") + "uploads/";
+		String uploadFolder = ApplicationConfig.UPLOADS_FOLDER_LOCATION;
 		for (Attachment attr : attachments) {
 			DataHandler handler = attr.getDataHandler();
 			try {
@@ -52,12 +52,51 @@ public class UploadResources {
 					dataUpload = getDataUpload("IMG", getImageHtml(encode64));
 				} else {
 					// "uploads/"nameFile;
-					FileOutputStream fileOutputStream = new FileOutputStream(new File(uploadFolder + nameFile));
+					FileOutputStream fileOutputStream = new FileOutputStream(new File(uploadFolder + File.separator + nameFile));
 					fileOutputStream.write(bos.toByteArray());
 					fileOutputStream.close();
 					dataUpload = new DataUpload(contentType, "uploads/" + nameFile);
 				}
 
+				bos.close();
+				stream.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+		return Response.ok(dataUpload).build();
+	}
+
+	@POST
+	@Path("/file")
+	@Consumes(MediaType.MULTIPART_FORM_DATA)
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response uploadFile(List<Attachment> attachments, @Context HttpServletRequest httpServletRequest) {
+		DataUpload dataUpload = null;
+		// String uploadFolder =
+		// httpServletRequest.getServletContext().getRealPath("/") + "uploads/";
+		String uploadFolder = ApplicationConfig.UPLOADS_FOLDER_LOCATION;
+		for (Attachment attr : attachments) {
+			DataHandler handler = attr.getDataHandler();
+			try {
+				InputStream stream = handler.getInputStream();
+
+				String contentType = handler.getContentType();
+				String nameFile = System.currentTimeMillis() + "_" + handler.getName();
+				ByteArrayOutputStream bos = null;
+				if (contentType != null) {
+					bos = new ByteArrayOutputStream();
+					int read = 0;
+					byte[] bytes = new byte[1024];
+					while ((read = stream.read(bytes)) != -1) {
+						bos.write(bytes);
+					}
+					FileOutputStream fileOutputStream = new FileOutputStream(new File(uploadFolder + File.separator + nameFile));
+					fileOutputStream.write(bos.toByteArray());
+					fileOutputStream.close();
+					dataUpload = new DataUpload(contentType, "uploads/" + nameFile);
+				}
 				bos.close();
 				stream.close();
 			} catch (Exception e) {

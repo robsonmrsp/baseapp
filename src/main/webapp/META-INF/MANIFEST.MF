@@ -2,27 +2,29 @@ Manifest-Version: 1.0
 Class-Path: cxf-rt-frontend-jaxrs-2.7.3.jar cxf-api-2.7.3.jar woodstox
  -core-asl-4.1.4.jar stax2-api-3.1.1.jar xmlschema-core-2.0.3.jar gero
  nimo-javamail_1.4_spec-1.7.1.jar wsdl4j-1.6.2.jar cxf-rt-core-2.7.3.j
- ar jaxb-impl-2.2.6.jar javax.ws.rs-api-2.0-m10.jar cxf-rt-bindings-xm
- l-2.7.3.jar cxf-rt-transports-http-2.7.3.jar jackson-core-asl-1.8.6.j
- ar jackson-mapper-asl-1.8.6.jar jackson-jaxrs-1.8.6.jar spring-orm-3.
- 1.1.RELEASE.jar spring-beans-3.1.1.RELEASE.jar spring-core-3.1.1.RELE
- ASE.jar spring-asm-3.1.1.RELEASE.jar commons-logging-1.1.1.jar spring
- -jdbc-3.1.1.RELEASE.jar spring-tx-3.1.1.RELEASE.jar aopalliance-1.0.j
- ar spring-aop-3.1.1.RELEASE.jar spring-context-3.1.1.RELEASE.jar spri
- ng-expression-3.1.1.RELEASE.jar spring-security-core-3.1.1.RELEASE.ja
- r spring-security-web-3.1.1.RELEASE.jar spring-web-3.1.1.RELEASE.jar 
- spring-security-config-3.1.1.RELEASE.jar spring-webmvc-3.1.1.RELEASE.
- jar spring-context-support-3.1.1.RELEASE.jar cglib-2.2.2.jar asm-3.3.
- 1.jar javax.inject-1.jar commons-dbcp-1.4.jar commons-pool-1.5.4.jar 
- hibernate-core-4.1.1.Final.jar antlr-2.7.7.jar jboss-logging-3.1.0.GA
- .jar jboss-transaction-api_1.1_spec-1.0.0.Final.jar dom4j-1.6.1.jar x
- ml-apis-1.0.b2.jar hibernate-jpa-2.0-api-1.0.1.Final.jar javassist-3.
- 15.0-GA.jar hibernate-commons-annotations-4.0.1.Final.jar hibernate-e
- nvers-4.1.1.Final.jar hibernate-entitymanager-4.1.1.Final.jar hiberna
- te-c3p0-4.1.1.Final.jar c3p0-0.9.1.jar log4j-1.2.16.jar commons-codec
- -1.2.jar postgresql-8.4-701.jdbc3.jar hibernate-spatial-4.0-M1.jar po
- stgis-jdbc-1.3.3.jar jts-1.12.jar xercesImpl-2.4.0.jar postgis-stubs-
- 1.3.3.jar slf4j-api-1.6.6.jar hibernate-validator-4.3.1.Final.jar doz
- er-5.4.0.jar commons-beanutils-1.8.3.jar commons-lang3-3.1.jar jcl-ov
- er-slf4j-1.6.6.jar slf4j-log4j12-1.6.6.jar
+ ar jaxb-impl-2.2.jar javax.ws.rs-api-2.0-m10.jar cxf-rt-bindings-xml-
+ 2.7.3.jar cxf-rt-transports-http-2.7.3.jar JavaAPIforKml-2.2.0-SNAPSH
+ OT.jar jaxb-api-2.2.jar stax-api-1.0-2.jar activation-1.1.jar jaxb-xj
+ c-2.2.jar xmlunit-1.2.jar jackson-core-asl-1.8.6.jar jackson-mapper-a
+ sl-1.8.6.jar jackson-jaxrs-1.8.6.jar spring-orm-3.1.1.RELEASE.jar spr
+ ing-beans-3.1.1.RELEASE.jar spring-core-3.1.1.RELEASE.jar spring-asm-
+ 3.1.1.RELEASE.jar commons-logging-1.1.1.jar spring-jdbc-3.1.1.RELEASE
+ .jar spring-tx-3.1.1.RELEASE.jar aopalliance-1.0.jar spring-aop-3.1.1
+ .RELEASE.jar spring-context-3.1.1.RELEASE.jar spring-expression-3.1.1
+ .RELEASE.jar spring-security-core-3.1.1.RELEASE.jar spring-security-w
+ eb-3.1.1.RELEASE.jar spring-web-3.1.1.RELEASE.jar spring-security-con
+ fig-3.1.1.RELEASE.jar spring-webmvc-3.1.1.RELEASE.jar spring-context-
+ support-3.1.1.RELEASE.jar cglib-2.2.2.jar asm-3.3.1.jar javax.inject-
+ 1.jar commons-dbcp-1.4.jar commons-pool-1.5.4.jar hibernate-core-4.1.
+ 1.Final.jar antlr-2.7.7.jar jboss-logging-3.1.0.GA.jar jboss-transact
+ ion-api_1.1_spec-1.0.0.Final.jar dom4j-1.6.1.jar xml-apis-1.0.b2.jar 
+ hibernate-jpa-2.0-api-1.0.1.Final.jar javassist-3.15.0-GA.jar hiberna
+ te-commons-annotations-4.0.1.Final.jar hibernate-envers-4.1.1.Final.j
+ ar hibernate-entitymanager-4.1.1.Final.jar hibernate-c3p0-4.1.1.Final
+ .jar c3p0-0.9.1.jar log4j-1.2.16.jar commons-codec-1.2.jar postgresql
+ -8.4-701.jdbc3.jar hibernate-spatial-4.0-M1.jar postgis-jdbc-1.3.3.ja
+ r jts-1.12.jar xercesImpl-2.4.0.jar postgis-stubs-1.3.3.jar slf4j-api
+ -1.6.6.jar hibernate-validator-4.3.1.Final.jar dozer-5.4.0.jar common
+ s-beanutils-1.8.3.jar commons-lang3-3.1.jar jcl-over-slf4j-1.6.6.jar 
+ slf4j-log4j12-1.6.6.jar
 

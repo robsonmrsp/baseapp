@@ -1,4 +1,4 @@
-define([ 'jquery', 'bootstrap' ], function($) {
+define([ 'underscore', 'jquery', 'bootstrap' ], function(_, $) {
 	utils = {
 		displayValidationErrors : function(messages) {
 			for ( var key in messages) {
@@ -7,6 +7,15 @@ define([ 'jquery', 'bootstrap' ], function($) {
 				}
 			}
 			this.showAlert('Erro!', 'Fix validation errors and try again', 'alert-error');
+		},
+
+		escapeById : function(id) {
+			return _.escape($('#' + id).val());
+		},
+
+		escapeByAttr : function(id, attr) {
+
+			return _.escape($('#' + id).attr(attr));
 		},
 
 		addValidationError : function(field, message) {
@@ -64,7 +73,7 @@ define([ 'jquery', 'bootstrap' ], function($) {
 				$('.alert').hide();
 			}
 		},
-		
+
 		getParameterByName : function(name) {
 			name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
 			var regexS = "[\\?&]" + name + "=([^&#]*)";
@@ -83,7 +92,6 @@ define([ 'jquery', 'bootstrap' ], function($) {
 				that.navigate('sintsview/showMedias');
 			}, 1500);
 		},
-
 
 		showErrorResponsePage : function(xhr) {
 			$('body').html(xhr.responseText);
